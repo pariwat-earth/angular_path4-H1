@@ -1,0 +1,10 @@
+nav{
+  height: 10rem;
+}
+main{
+  background-color: rgb(175, 230, 175);
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

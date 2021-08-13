@@ -1,0 +1,39 @@
+<form [formGroup]="from" class="stylefrom">
+  <div>
+    <b>Name</b>
+    <span style="color: red;" *ngIf="from.controls['name'].errors?.pattern">*</span>
+    <span style="color: red;" *ngIf="from.controls['name'].errors?.required">*</span>
+    <br>
+    <br>
+    <input type="text"  formControlName="name" placeholder="Your answer">
+  </div>
+  <div>
+    <b>Email</b>
+    <span style="color: red;" *ngIf="from.controls['email'].errors?.email">*</span>
+    <span style="color: red;" *ngIf="from.controls['email'].errors?.required">*</span>
+    <br>
+    <br>
+    <input type="email" formControlName="email" placeholder="Your answer">
+  </div>
+  <div>
+    <b>Postal Address</b>
+    <span style="color: red;" *ngIf="from.controls['postalAddress'].errors?.required">*</span>
+    <span style="color: red;" *ngIf="from.controls['postalAddress'].errors?.minlength">*</span>
+    <br>
+    <br>
+    <input formControlName="postalAddress" placeholder="Your answer">
+  </div>
+  <div>
+    <b>Comments</b>
+    <br>
+    <br>
+    <input formControlName="Comments" placeholder="Your answer">
+  </div>
+  <br>
+  <div>
+    <button type="button" class="btn btn-lg btn-primary" [disabled]="from.invalid">SUBMIT</button>
+  </div>
+</form>
+<!-- <code>
+  {{form.value | json}
+</code> -->
